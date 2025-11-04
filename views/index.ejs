@@ -20,6 +20,93 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        /* Page header */
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 8px 0 26px;
+            letter-spacing: 0.6px;
+            background: linear-gradient(90deg, #0ea5ff, #7c3aed);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Quote list container */
+        ol {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0;
+            display: grid;
+            gap: 1px;
+        }
+
+        /* Each quote card */
+        ol > li {
+            list-style: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,250,255,0.85));
+            border-radius: 12px;
+            padding: 16px 18px;
+            box-shadow: 0 8px 22px rgba(10, 25, 47, 0.08);
+            transition: transform 160ms ease, box-shadow 160ms ease;
+            overflow: hidden;
+        }
+
+        /* Hover lift for cards */
+        ol > li:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 38px rgba(10, 25, 47, 0.12);
+        }
+
+        /* Inner meta list (Id / Author / Quote) */
+        ol > li ul {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 5px;
+        }
+
+        ol > li ul li {
+            list-style: none;
+            padding: 4px 0;
+            color: #0b2540;
+        }
+
+        /* Emphasize author and quote text */
+        ol > li ul li:nth-child(2) { /* Author */
+            font-weight: 600;
+            color: #0b3b5a;
+        }
+
+        ol > li ul li:nth-child(3) { /* Quote */
+            font-style: italic;
+            color: #143049;
+            background: rgba(10, 45, 77, 0.03);
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        /* Subtle separator styling (for the <hr> used between items) */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(10,25,47,0.06), transparent);
+            width: 92%;
+            margin: 18px auto;
+        }
+
+        /* Link hover/active polish without repeating base link rules */
+        a:hover,
+        a:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 640px) {
+            h1 { font-size: 1.6rem; }
+            ol > li { padding: 12px; }
+            ol { gap: 12px; padding: 0 12px; }
+        }
     </style>
 </head>
 <body>
@@ -39,4 +126,5 @@
 
     <a href="/">Refresh</a>
 </body>
+
 </html>
