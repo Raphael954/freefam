@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Quotes</h1>
+    <ol>
+        <% quote.forEach(quotes => { %>
+            <li>
+                <ul>
+                    <li>Id: <%= quotes._id %></li>
+                    <li>Author: <%= quotes.author %></li>
+                    <li>Quote: <%= quotes.content %></li>
+                </ul>
+            </li>
+            <br><hr><br>
+        <% }) %>
+    </ol>
+
+    <a href="/">Refresh</a>
+</body>
+</html>
